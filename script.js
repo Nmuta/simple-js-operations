@@ -3,10 +3,10 @@ module.exports = {
     return string.split(" ");
   },
 
-  swapInPlace: function(arr,a,b){
-    var temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
+  swapInPlace: function(arr,indexa,indexb){
+    var temp = arr[indexa];
+    arr[indexa] = arr[indexb];
+    arr[indexb] = temp;
     return arr;
   },
 
