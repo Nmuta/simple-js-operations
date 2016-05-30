@@ -1,14 +1,25 @@
 module.exports = {
-  stringToArray: function(){
-
+  stringToArray: function(inString){
+    return inString.split(" ");
   },
-  swapInPlace: function(){
-
+  arrayToString: function(inArray){
+    return inArray.join(", ");
+    // var result = "wash, rinse, repeat";
+    // return result;
   },
-  arrayToString: function(){
-
+  swapInPlace: function(inArray,i,j){
+    var hold = inArray[i];
+    inArray[i]=inArray[j];
+    inArray[j]=hold;
+    return inArray;
   },
-  keys: function(){
-
+  keys: function(inObject){
+    var result=[];
+    for (var key in inObject) {
+      result.push(key);
+    }
+    return result;
   }
 };
+
+console.log(module.exports.arrayToString(["wash", "rinse", "repeat"]));

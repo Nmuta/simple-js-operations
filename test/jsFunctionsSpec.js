@@ -7,16 +7,16 @@ describe("#stringToArray", function(){
   });
 });
 
+describe("#arrayToString", function(){
+  it("converts a string to an array based on spaces", function(){
+    expect(methods.arrayToString(["wash", "rinse", "repeat"])).to.eql("wash, rinse, repeat");
+  });
+});
+
 describe("#swapInPlace", function(arr,a,b){
   it("swaps elements in place", function(){
     expect(methods.swapInPlace(["quick", "brown", "fox", "jumps"], 1,3))
     .to.eql(["quick", "jumps", "fox", "brown"]);
-  });
-});
-
-describe("#arrayToString", function(){
-  xit("converts an Array to a string", function(){
-    expect(methods.arrayToString(["wash", "rinse", "repeat"]).to.equal("wash, rinse, repeat"));
   });
 });
 
