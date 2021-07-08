@@ -1,14 +1,21 @@
 module.exports = {
-  stringToArray: function(){
-
+  stringToArray: function(string){
+    return string.split(" ");
   },
-  swapInPlace: function(){
 
+  swapInPlace: function(arr,indexa,indexb){
+    var temp = arr[indexa];
+    arr[indexa] = arr[indexb];
+    arr[indexb] = temp;
+    return arr;
   },
-  arrayToString: function(){
 
+  arrayToString: function(array){
+    var arr = array.join(", ");
+    return arr;
   },
-  keys: function(){
 
+  keys: function(obj){
+    return Object.keys(obj);
   }
 };
